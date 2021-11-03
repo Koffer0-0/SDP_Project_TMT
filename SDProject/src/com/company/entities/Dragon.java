@@ -12,4 +12,19 @@ public class Dragon extends Infantry {
     public void display() {
         System.out.println("ARRRRRRRR DRAGON PSH PSH PSH");
     }
+
+    @Override
+    public double cost() {
+        return 0;
+    }
+
+    @Override
+    public void traintroop() {
+
+    }
+
+    @Override
+    public void improveTroop() {
+
+    }
 }

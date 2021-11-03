@@ -12,4 +12,19 @@ public class Giant extends Infantry {
     public void display() {
         System.out.println("CRUSH CRUSH CRUSH");
     }
+
+    @Override
+    public double cost() {
+        return 0;
+    }
+
+    @Override
+    public void traintroop() {
+
+    }
+
+    @Override
+    public void improveTroop() {
+
+    }
 }

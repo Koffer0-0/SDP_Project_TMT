@@ -12,4 +12,19 @@ public class Barbarian extends Infantry {
     public void display() {
         System.out.println("UUURGAAH");
     }
+
+    @Override
+    public double cost() {
+        return 0;
+    }
+
+    @Override
+    public void traintroop() {
+
+    }
+
+    @Override
+    public void improveTroop() {
+
+    }
 }

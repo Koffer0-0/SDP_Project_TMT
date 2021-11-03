@@ -1,11 +1,23 @@
 package com.company.strategyPattern;
 
 public abstract class Infantry {
+
+    private String description = "UNKNOWN";
+    protected String purpose;
+
     private FlyStrategy flyStrategy;
     private JumpStrategy jumpStrategy;
 
     public Infantry() {}
 
+    public Infantry(String purpose) {
+        this.purpose = purpose;
+    }
+
+    protected abstract void display();
+
+    //STRATEGY
+    /* <----------------------------------------------------------------------------------------------> */
     public Infantry(FlyStrategy flyStrategy, JumpStrategy jumpStrategy) {
         this.flyStrategy = flyStrategy;
         this.jumpStrategy = jumpStrategy;
@@ -35,5 +47,18 @@ public abstract class Infantry {
         this.jumpStrategy = jumpStrategy;
     }
 
-    protected abstract void display();
+    //DECORATOR
+    /* <----------------------------------------------------------------------------------------------> */
+
+    public String getDescription() {
+        return description;
+    }
+    public abstract double cost();
+
+    //BRIDGE
+    /* <----------------------------------------------------------------------------------------------> */
+
+    public abstract void traintroop();
+    public abstract void improveTroop();
+
 }
