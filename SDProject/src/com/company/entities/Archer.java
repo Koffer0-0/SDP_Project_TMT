@@ -19,7 +19,7 @@ public class Archer extends Infantry {
     }
 
     @Override
-    public void traintroop() {
+    public void trainTroop() {
 
     }
 

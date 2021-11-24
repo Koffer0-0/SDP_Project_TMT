@@ -1,4 +1,4 @@
 package com.company.bridgePattern;
 
-public interface Bridge {
+public class DarkElexirBarracks {
 }

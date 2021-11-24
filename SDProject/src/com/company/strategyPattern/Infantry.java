@@ -58,7 +58,7 @@ public abstract class Infantry {
     //BRIDGE
     /* <----------------------------------------------------------------------------------------------> */
 
-    public abstract void traintroop();
+    public abstract void trainTroop();
     public abstract void improveTroop();
 
 }

@@ -19,7 +19,7 @@ public class Giant extends Infantry {
     }
 
     @Override
-    public void traintroop() {
+    public void trainTroop() {
 
     }
 
