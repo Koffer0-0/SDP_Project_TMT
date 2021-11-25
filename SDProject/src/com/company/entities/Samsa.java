@@ -18,9 +18,8 @@ public class Samsa extends Dishes {
         return 200;
     }
 
-
     @Override
-    public void size() {
+    public void takeSize() {
 
     }
 }

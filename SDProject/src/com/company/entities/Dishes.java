@@ -1,8 +1,13 @@
-package com.company.strategyPattern;
+package com.company.entities;
+
+import com.company.strategyPattern.BakedStrategy;
+import com.company.strategyPattern.BoiledStrategy;
+import com.company.strategyPattern.FriedStrategy;
+import com.company.strategyPattern.SteamedStrategy;
 
 public abstract class Dishes {
 
-    private String description = "UNKNOWN";
+    private String description = "БЛЮДА";
     protected String purpose;
 
     private BoiledStrategy boiledStrategy;
@@ -83,6 +88,6 @@ public abstract class Dishes {
     //BRIDGE
     /* <----------------------------------------------------------------------------------------------> */
 
-    public abstract void size();
+    public abstract void takeSize();
 
 }

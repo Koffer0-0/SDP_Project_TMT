@@ -18,9 +18,8 @@ public class Manty extends Dishes {
         return 300;
     }
 
-
     @Override
-    public void size() {
+    public void takeSize() {
 
     }
 }

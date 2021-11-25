@@ -18,9 +18,8 @@ public class Goulash extends Dishes {
         return 450;
     }
 
-
     @Override
-    public void size() {
+    public void takeSize() {
 
     }
 }
