@@ -38,7 +38,6 @@ public class ServiceFacade {
         // take order
         // calculate and give cost
 
-        waiter.getOrderPrice();
 
 
         // calculate and give info about time to wait
@@ -47,7 +46,7 @@ public class ServiceFacade {
         choose = waiter.drinks(input);
         drinks = waiter.chooseDrink(choose, drinksFactory, drinks);
 
-        System.out.println("");
+        waiter.getOrderPrice();
     }
 
     public void takeOrder(){
