@@ -1,7 +1,9 @@
 package com.company;
 
 import com.company.bridgePattern.Large;
+import com.company.bridgePattern.Medium;
 import com.company.bridgePattern.Size;
+import com.company.bridgePattern.Small;
 import com.company.decoratorPattern.Beef;
 import com.company.decoratorPattern.Chicken;
 import com.company.decoratorPattern.Lamb;
@@ -9,9 +11,6 @@ import com.company.entities.Dishes;
 import com.company.entities.Goulash;
 import com.company.entities.Manty;
 import com.company.entities.Samsa;
-
-import java.nio.channels.ScatteringByteChannel;
-import java.security.Guard;
 import java.util.Scanner;
 
 public class Main {
@@ -114,10 +113,10 @@ public class Main {
                 size = new Large();
                 break;
             case 2:
-                size = new Large();
+                size = new Medium();
                 break;
             case 3:
-                size = new Large();
+                size = new Small();
                 break;
             default:
                 System.out.println("ОШИБКА! Выберите вариант от 1 до 3!");
@@ -125,7 +124,7 @@ public class Main {
                 System.out.println("-----------------------------------");
                 break;
         }
-        System.out.println("Стоимость размера:" + size.cost());
+        System.out.println("Стоимость размера: " + size.cost());
         return size;
     }
 }
