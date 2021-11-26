@@ -121,6 +121,7 @@ public class Waiter {
         System.out.println("2. Латте");
         System.out.println("3. Индийский чай");
         System.out.println("4. Узбекский чай");
+        System.out.println("5. пасеба не нада");
         option = input.nextByte();
         return option;
     }
