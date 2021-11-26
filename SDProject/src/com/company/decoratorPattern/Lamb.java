@@ -17,7 +17,7 @@ public class Lamb extends Topping {
 
     @Override
     public int cost() {
-        return 90;
+        return 450;
     }
 
     @Override

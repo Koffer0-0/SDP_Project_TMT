@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.bridgePattern.Large;
+import com.company.bridgePattern.Size;
 import com.company.decoratorPattern.Beef;
 import com.company.decoratorPattern.Chicken;
 import com.company.decoratorPattern.Lamb;
@@ -16,6 +18,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         Dishes dishes = null;
+        Size size = null;
 
         //
         int choose = menu(input);
@@ -24,6 +27,10 @@ public class Main {
         //
         choose = topping(input);
         dishes = chooseTopping(choose, dishes);
+
+        //
+        choose = sizes(input);
+        size = chooseSize(choose, size);
 
     }
 
@@ -43,6 +50,16 @@ public class Main {
         System.out.println("1. Говядина");
         System.out.println("2. Ягнятина");
         System.out.println("3. Куринный");
+        option = input.nextByte();
+        return option;
+    }
+
+    public static short sizes(Scanner input) {
+        short option;
+        System.out.println("Какую порцию хотите?");
+        System.out.println("1. Большую");
+        System.out.println("2. Среднюю");
+        System.out.println("3. Маленькую");
         option = input.nextByte();
         return option;
     }
@@ -87,20 +104,20 @@ public class Main {
                 System.out.println("-----------------------------------");
                 break;
         }
-        System.out.println("Стоимость " + dishes.cost());
+        System.out.println("Стоимость топпинга: " + dishes.cost());
         return dishes;
     }
 
-    public static Dishes chooseSize(int choose, Dishes dishes) {
+    public static Size chooseSize(int choose, Size size) {
         switch (choose) {
             case 1:
-                dishes = new Beef(dishes);
+                size = new Large();
                 break;
             case 2:
-                dishes = new Lamb(dishes);
+                size = new Large();
                 break;
             case 3:
-                dishes = new Chicken(dishes);
+                size = new Large();
                 break;
             default:
                 System.out.println("ОШИБКА! Выберите вариант от 1 до 3!");
@@ -108,7 +125,7 @@ public class Main {
                 System.out.println("-----------------------------------");
                 break;
         }
-        System.out.println("Стоимость " + dishes.cost());
-        return dishes;
+        System.out.println("Стоимость размера:" + size.cost());
+        return size;
     }
 }

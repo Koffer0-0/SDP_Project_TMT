@@ -6,4 +6,9 @@ public class Large implements Size {
     public void takeSize() {
         System.out.println("Большая порция");
     }
+
+    @Override
+    public int cost() {
+        return 200;
+    }
 }

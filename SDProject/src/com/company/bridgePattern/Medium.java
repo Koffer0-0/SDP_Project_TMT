@@ -6,4 +6,9 @@ public class Medium implements Size {
     public void takeSize() {
         System.out.println("Средняя порция");
     }
+
+    @Override
+    public int cost() {
+        return 150;
+    }
 }

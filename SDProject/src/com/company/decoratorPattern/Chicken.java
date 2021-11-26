@@ -17,7 +17,7 @@ public class Chicken extends Topping {
 
     @Override
     public int cost() {
-        return 70;
+        return 350;
     }
 
     @Override

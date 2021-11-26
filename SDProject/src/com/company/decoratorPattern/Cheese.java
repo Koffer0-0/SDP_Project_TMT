@@ -17,7 +17,7 @@ public class Cheese extends Topping {
 
     @Override
     public int cost() {
-        return 50;
+        return 200;
     }
 
     @Override
