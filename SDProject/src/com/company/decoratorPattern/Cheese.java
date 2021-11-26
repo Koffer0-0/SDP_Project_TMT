@@ -11,12 +11,12 @@ public class Cheese extends Topping {
     }
 
     @Override
-    protected void display() {
-
+    public void display() {
+        System.out.println("Сыр");
     }
 
     @Override
-    public double cost() {
+    public int cost() {
         return 50;
     }
 

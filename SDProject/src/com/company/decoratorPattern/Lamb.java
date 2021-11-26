@@ -11,12 +11,12 @@ public class Lamb extends Topping {
     }
 
     @Override
-    protected void display() {
-
+    public void display() {
+        System.out.println("Ягнятина");
     }
 
     @Override
-    public double cost() {
+    public int cost() {
         return 90;
     }
 

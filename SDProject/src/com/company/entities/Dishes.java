@@ -21,7 +21,7 @@ public abstract class Dishes {
         this.purpose = purpose;
     }
 
-    protected abstract void display();
+    public abstract void display();
 
     //STRATEGY
     /* <----------------------------------------------------------------------------------------------> */
@@ -83,7 +83,8 @@ public abstract class Dishes {
     public String getDescription() {
         return description;
     }
-    public abstract double cost();
+
+    public abstract int cost();
 
     //BRIDGE
     /* <----------------------------------------------------------------------------------------------> */

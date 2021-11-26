@@ -11,12 +11,12 @@ public class Chicken extends Topping {
     }
 
     @Override
-    protected void display() {
-
+    public void display() {
+        System.out.println("Курица");
     }
 
     @Override
-    public double cost() {
+    public int cost() {
         return 70;
     }
 

@@ -14,7 +14,7 @@ public class Goulash extends Dishes {
     }
 
     @Override
-    public double cost() {
+    public int cost() {
         return 450;
     }
 
