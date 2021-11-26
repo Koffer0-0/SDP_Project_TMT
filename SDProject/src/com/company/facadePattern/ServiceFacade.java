@@ -5,11 +5,13 @@ import com.company.entities.Dishes;
 import com.company.entities.Waiter;
 import com.company.factoryPattern.Drinks;
 import com.company.factoryPattern.DrinksFactory;
+import com.company.observerPattern.Stolovka;
 
 import java.util.Scanner;
 
 public class ServiceFacade {
     private Waiter waiter = new Waiter();
+    private Stolovka stolovka = new Stolovka();
 
     Scanner input = new Scanner(System.in);
 
@@ -46,15 +48,12 @@ public class ServiceFacade {
         choose = waiter.drinks(input);
         drinks = waiter.chooseDrink(choose, drinksFactory, drinks);
 
+
+
         waiter.getOrderInfo();
         waiter.getOrderPrice();
     }
 
-    public void takeOrder(){
-        // take order info(id, what dishes to cook)
-        // cook
-        // give to waiter
-    }
 
     public void serveClientSecond(){
         // take dishes
@@ -62,9 +61,9 @@ public class ServiceFacade {
         // take money
     }
 
-    public void cleanerWork(){
+/*    public void cleanerWork(){
 
-    }
+    }*/
 
 
 }

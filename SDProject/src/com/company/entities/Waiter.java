@@ -8,10 +8,14 @@ import com.company.decoratorPattern.Beef;
 import com.company.decoratorPattern.Chicken;
 import com.company.decoratorPattern.Lamb;
 import com.company.factoryPattern.*;
+import com.company.observerPattern.Client;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.Scanner;
+
+import static java.lang.Math.random;
 
 public class Waiter {
 
@@ -19,6 +23,11 @@ public class Waiter {
     private int OrderPrice;
     private String sizeInfo;
     private List<Drinks> drinksList = new ArrayList<>();
+
+
+    private Client client = new Client("Damir Bolat");
+
+    private Order order;
 
     public short menu(Scanner input) {
         short option;
@@ -170,7 +179,6 @@ public class Waiter {
     public void getOrderInfo(){
         System.out.println("Dishes: " + dishesList.toString() + "\n" +
                     "Drinks: " + drinksList.toString());
-
     }
 
 }
