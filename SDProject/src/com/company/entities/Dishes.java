@@ -6,8 +6,6 @@ import com.company.strategyPattern.FriedStrategy;
 import com.company.strategyPattern.SteamedStrategy;
 
 public abstract class Dishes {
-
-    private String description = "БЛЮДА";
     protected String purpose;
 
     private BoiledStrategy boiledStrategy;
@@ -79,10 +77,6 @@ public abstract class Dishes {
 
 //DECORATOR
     /* <----------------------------------------------------------------------------------------------> */
-
-    public String getDescription() {
-        return description;
-    }
 
     public abstract int cost();
 

@@ -25,9 +25,6 @@ public class Main {
         choose = topping(input);
         dishes = chooseTopping(choose, dishes);
 
-        //
-        choose = topping(input);
-        dishes = chooseTopping(choose, dishes);
     }
 
     public static short menu(Scanner input) {
@@ -54,7 +51,6 @@ public class Main {
         switch (choose) {
             case 1:
                 dishes = new Goulash();
-
                 break;
             case 2:
                 dishes = new Manty();
@@ -70,7 +66,7 @@ public class Main {
         }
 
         dishes.display();
-        System.out.print(" Стоимость " + dishes.cost());
+        System.out.println("Стоимость " + dishes.cost());
         return dishes;
     }
 
@@ -78,7 +74,27 @@ public class Main {
         switch (choose) {
             case 1:
                 dishes = new Beef(dishes);
-                System.out.println("Стоимость " + dishes.cost());
+                break;
+            case 2:
+                dishes = new Lamb(dishes);
+                break;
+            case 3:
+                dishes = new Chicken(dishes);
+                break;
+            default:
+                System.out.println("ОШИБКА! Выберите вариант от 1 до 3!");
+                System.out.println("ПОПРОБУЙТЕ ЗАНОВО!");
+                System.out.println("-----------------------------------");
+                break;
+        }
+        System.out.println("Стоимость " + dishes.cost());
+        return dishes;
+    }
+
+    public static Dishes chooseSize(int choose, Dishes dishes) {
+        switch (choose) {
+            case 1:
+                dishes = new Beef(dishes);
                 break;
             case 2:
                 dishes = new Lamb(dishes);
