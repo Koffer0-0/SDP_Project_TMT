@@ -49,6 +49,12 @@ public class Waiter {
         return option;
     }
 
+    public short endOrder(Scanner input) {
+        short option;
+        System.out.println("Ваш заказ готов! Оплатите заказ");
+        option = input.nextByte();
+        return option;
+    }
 
     public short sizes(Scanner input) {
         short option;

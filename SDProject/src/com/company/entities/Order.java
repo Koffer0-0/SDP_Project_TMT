@@ -1,7 +1,5 @@
 package com.company.entities;
 
-import java.util.Random;
-
 public class Order {
     private int id;
     private String description;
