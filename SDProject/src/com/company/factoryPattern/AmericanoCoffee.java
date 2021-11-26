@@ -10,4 +10,9 @@ public class AmericanoCoffee implements Drinks {
     public int cost() {
         return 300;
     }
+
+    @Override
+    public String toString() {
+        return "AmericanoCoffee{}";
+    }
 }

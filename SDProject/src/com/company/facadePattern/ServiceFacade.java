@@ -46,6 +46,7 @@ public class ServiceFacade {
         choose = waiter.drinks(input);
         drinks = waiter.chooseDrink(choose, drinksFactory, drinks);
 
+        waiter.getOrderInfo();
         waiter.getOrderPrice();
     }
 

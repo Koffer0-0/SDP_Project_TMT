@@ -10,4 +10,9 @@ public class UzbekTea implements Drinks {
     public int cost() {
         return 200;
     }
+
+    @Override
+    public String toString() {
+        return "UzbekTea{}";
+    }
 }

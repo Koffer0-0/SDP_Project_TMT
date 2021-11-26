@@ -10,4 +10,9 @@ public class LatteCoffee implements Drinks {
     public int cost() {
         return 500;
     }
+
+    @Override
+    public String toString() {
+        return "LatteCoffee{}";
+    }
 }

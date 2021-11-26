@@ -24,4 +24,11 @@ public class Cheese extends Topping {
     public void takeSize() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Cheese{" +
+                "dishes=" + dishes +
+                '}';
+    }
 }

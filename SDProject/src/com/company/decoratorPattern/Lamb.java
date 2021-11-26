@@ -24,4 +24,11 @@ public class Lamb extends Topping {
     public void takeSize() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Lamb{" +
+                "dishes=" + dishes +
+                '}';
+    }
 }

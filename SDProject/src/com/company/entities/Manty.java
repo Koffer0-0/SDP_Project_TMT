@@ -22,4 +22,9 @@ public class Manty extends Dishes {
     public void takeSize() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Manty{";
+    }
 }

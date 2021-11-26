@@ -9,11 +9,16 @@ import com.company.decoratorPattern.Chicken;
 import com.company.decoratorPattern.Lamb;
 import com.company.factoryPattern.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Waiter {
 
+    private List<Dishes> dishesList = new ArrayList<>();
     private int OrderPrice;
+    private String sizeInfo;
+    private List<Drinks> drinksList = new ArrayList<>();
 
     public short menu(Scanner input) {
         short option;
@@ -65,6 +70,7 @@ public class Waiter {
         }
 
         dishes.display();
+        dishesList.add(dishes);
         System.out.println("Стоимость " + dishes.cost());
         OrderPrice += dishes.cost();
         return dishes;
@@ -89,6 +95,7 @@ public class Waiter {
         }
         System.out.println("Стоимость топпинга: " + dishes.cost());
         OrderPrice += dishes.cost();
+        dishesList.add(dishes);
         return dishes;
     }
 
@@ -152,11 +159,18 @@ public class Waiter {
         drinks = drinksFactory.createDrink();
         System.out.println("Стоимость: " + drinks.cost());
         OrderPrice += drinks.cost();
+        drinksList.add(drinks);
         return drinks;
     }
 
     public void getOrderPrice(){
-        System.out.println("Your total price of your order is " + OrderPrice);
+        System.out.println("Ваш суммарный счет заказа - " + OrderPrice);
+    }
+
+    public void getOrderInfo(){
+        System.out.println("Dishes: " + dishesList.toString() + "\n" +
+                    "Drinks: " + drinksList.toString());
+
     }
 
 }

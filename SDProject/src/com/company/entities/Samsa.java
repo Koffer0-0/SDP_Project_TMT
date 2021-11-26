@@ -22,4 +22,9 @@ public class Samsa extends Dishes {
     public void takeSize() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Samsa{}";
+    }
 }

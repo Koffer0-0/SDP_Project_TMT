@@ -22,4 +22,9 @@ public class Goulash extends Dishes {
     public void takeSize() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Goulash{}";
+    }
 }
