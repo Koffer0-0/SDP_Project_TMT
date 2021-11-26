@@ -3,6 +3,8 @@ package com.company.facadePattern;
 import com.company.bridgePattern.Size;
 import com.company.entities.Dishes;
 import com.company.entities.Waiter;
+import com.company.factoryPattern.Drinks;
+import com.company.factoryPattern.DrinksFactory;
 
 import java.util.Scanner;
 
@@ -13,6 +15,9 @@ public class ServiceFacade {
 
     Dishes dishes = null;
     Size size = null;
+
+    Drinks drinks = null;
+    DrinksFactory drinksFactory = null;
 
 
 
@@ -38,6 +43,9 @@ public class ServiceFacade {
 
         // calculate and give info about time to wait
         // end
+
+        choose = waiter.drinks(input);
+        drinks = waiter.chooseDrink(choose, drinksFactory, drinks);
 
         System.out.println("");
     }
