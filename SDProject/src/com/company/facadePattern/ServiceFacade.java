@@ -7,7 +7,7 @@ import com.company.entities.Waiter;
 import java.util.Scanner;
 
 public class ServiceFacade {
-    private Waiter waiter;
+    private Waiter waiter = new Waiter();
 
     Scanner input = new Scanner(System.in);
 
